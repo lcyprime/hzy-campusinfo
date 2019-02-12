@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="mycampus" extends="struts-default">
+	<action name="login" class="com.hzy.campus.action.LoginAction" method="execute">
+		<result name="user">/user.jsp</result>
+		<result name="admin">/admin.jsp</result>
+		<result name="error">/index.jsp</result>
+	</action>
+	<action name="log" class="com.hzy.campus.action.LogAction" method="execute">
+		<result name="log">/log.jsp</result>
+	</action>
+	<action name="*Order" class="com.hzy.campus.action.OrderAction" method="{0}">
+		<result name="order">/my_order.jsp</result>
+	</action>
+	<action name="*Relation" class="com.hzy.campus.action.RelationAction" method="{0}">
+		<result name="relation">/my_relation.jsp</result>
+	</action>
+</package>
+</struts>    
